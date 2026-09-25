@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNTAMED</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+    <!-- Header start -->
+    <header>
+        <nav>
+            <a href="index.html" class="brand">Untamed</a>
+
+            <ul class="nav_list">
+                <li class="nav_item dropdown">
+                    <a href="index.html#explore" class="nav_link">Explore</a>
+
+                    <ul class="nested_list">
+                        <li class="nested_item">
+                            <a href="arctic.html" class="nested_link">Arctic</a>
+                        </li>
+                        <li class="nested_item">
+                            <a href="forest.html" class="nested_link">Forest</a>
+                        </li>
+                        <li class="nested_item">
+                            <a href="desert.html" class="nested_link">Desert</a>
+                        </li>
+                        <li class="nested_item">
+                            <a href="mountains.html" class="nested_link">Mountains</a>
+                        </li>
+                        <li class="nested_item">
+                            <a href="ocean.html" class="nested_link">Ocean</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav_item">
+                    <a href="about.html" class="nav_link">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header end -->
+
+
+
+    <!-- Main start -->
+    <main>
+
+        <section class="hero">
+            <div class="hero_content">
+                <p class="hero_eyebrow">Wilderness / 01</p>
+                <h1 class="hero_title">Earth's Last Wilderness</h1>
+                <p class="hero_description">Remote landscapes shaped by climate, time, and life&mdash;places where
+                    nature still sets the rules.</p>
+            </div>
+        </section>
+
+        <section class="intro">
+            <p class="intro_eyebrow">01 / Wilderness</p>
+            <h2 class="intro_title">What remains wild?</h2>
+            <p class="intro_description">Wilderness is where natural systems continue to shape the landscape with
+                limited human interference.</p>
+        </section>
+
+        <section id="explore" class="explore">
+            <div class="explore_content">
+                <p class="explore_eyebrow">02 / Explore</p>
+                <h2 class="explore_title">Five worlds. One wild earth.</h2>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide environment arctic">
+                        <div class="environment_content">
+                            <p class="environment_eyebrow">01</p>
+                            <h3 class="environment_title">Arctic</h3>
+                            <p class="environment_description">Frozen systems at the edge of survival.</p>
+                            <a href="arctic.html" class="environment_link">Explore Arctic <i class="fa fa-arrow-up"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="swiper-slide environment forest">
+                        <div class="environment_content">
+                            <p class="environment_eyebrow">02</p>
+                            <h3 class="environment_title">Forest</h3>
+                            <p class="environment_description">Frozen systems at the edge of survival.</p>
+                            <a href="forest.html" class="environment_link">Explore Forest <i class="fa fa-arrow-up"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Main end -->
+
+
+
+    <!-- Footer start -->
+    <footer></footer>
+    <!-- Footer end -->
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            grabCursor: true,
+            loop: true,
+            effect: 'fade',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            keyboard: {
+                enabled: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

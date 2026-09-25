@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Remove default values */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reusable */
+body {
+    font-family: "Archivo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Reusable */
+
+
+
+/* Header start */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    height: 80px;
+}
+
+.brand {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+    /* letter-spacing= 20px(1.25rem) * 0.08= 1.6px */
+    letter-spacing: 0.08em;
+    color: #f5f5f5;
+    transition: opacity 0.2s ease;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav_link {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #f5f5f5;
+    transition: opacity 0.2s ease;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.nested_list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: rgba(10, 10, 10, 0.92);
+    padding: 0.75rem 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.nested_link {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #f5f5f5;
+    transition: opacity 0.2s ease;
+}
+
+.dropdown:hover .nested_list,
+.dropdown:focus-within .nested_list {
+    display: flex;
+}
+
+.nav_link:hover,
+.nav_link:focus,
+.nested_link:hover,
+.nested_link:focus,
+.brand:hover,
+.brand:focus {
+    opacity: 0.65;
+}
+
+/* Header end */
+
+
+
+/* Main start */
+/* Hero start */
+.hero {
+    min-height: 100vh;
+    background-image: url("../assets/images/alaska.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* To move the content div to the lower left corner. */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem 2.5rem;
+    color: #f5f5f5;
+}
+
+.hero_eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.hero_title {
+    text-transform: uppercase;
+    /* clamp(min, preferred, max)  vw: view-width(1vw=1% of 1440px=14.4px ) */
+    font-size: clamp(3rem, 7vw, 7rem);
+    /* line-height is a multiplier. line-height=0.9 * 7vw= 0.9 * 100.8px= 90.72px*/
+    line-height: 0.9;
+    font-weight: 600;
+    /* the width of 12 "0" */
+    max-width: 13ch;
+}
+
+.hero_description {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 70ch;
+    margin-top: 1.5rem;
+}
+
+/* Hero end */
+
+
+/* Intro start */
+/* I can use div to wrap eyebrow and title, and use flexbox to get this layout design but it's so simple.  */
+.intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem 4rem;
+    padding: 8rem 2.5rem;
+    background-color: #f1f0ec;
+    color: #161616;
+}
+
+.intro_eyebrow {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+
+.intro_title {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-transform: uppercase;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.9;
+    font-weight: 600;
+}
+
+.intro_description {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 70ch;
+}
+
+/* Intro end */
+
+
+
+/* Explore start */
+.explore {
+    padding: 8rem 0;
+    background-color: #101010;
+    color: #f5f5f5;
+}
+
+.explore_content {
+    padding: 0 2.5rem;
+    margin: 3rem;
+}
+
+.explore_eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+}
+
+.explore_title {
+    text-transform: uppercase;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.9;
+    font-weight: 600;
+    max-width: 16ch;
+}
+
+/* Arctic start */
+.environment {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 2.5rem;
+    gap: 1rem;
+    color: #f5f5f5;
+}
+
+.arctic {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5)0%, rgba(0, 0, 0, 0)100%), url("../assets/images/arctic1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.environment.swiper-slide {
+    display: flex;
+}
+
+.environment_eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+
+.environment_title {
+    text-transform: uppercase;
+    font-size: clamp(5rem, 7vw, 7rem);
+    line-height: 0.9;
+    font-weight: 600;
+}
+
+.environment_description {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 38ch;
+}
+
+.environment_link {
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    align-self: flex-start;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 0.3rem;
+}
+
+.environment_link i {
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.environment_link:hover i {
+    transform: rotate(45deg) translate(5px, -5px);
+}
+/* Arctic end */
+
+/* Forest start */
+.forest{
+    background: linear-gradient(90deg, rgba(0,0,0,0.5)0%,rgba(0,0,0,0)100%),url("../assets/images/forest.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Forest end */
+
+
+/* Explore end */
+
+/* Main end */
+
+
+
+/* Footer start */
+/* Footer end */
