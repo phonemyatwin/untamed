@@ -89,7 +89,8 @@
                             <p class="environment_eyebrow">01</p>
                             <h3 class="environment_title">Arctic</h3>
                             <p class="environment_description">Frozen systems at the edge of survival.</p>
-                            <a href="arctic.html" class="environment_link">Explore Arctic <i class="fa fa-arrow-up"></i></a>
+                            <a href="arctic.html" class="environment_link">Explore Arctic <i
+                                    class="fa fa-arrow-up"></i></a>
                         </div>
                     </article>
 
@@ -97,17 +98,62 @@
                         <div class="environment_content">
                             <p class="environment_eyebrow">02</p>
                             <h3 class="environment_title">Forest</h3>
-                            <p class="environment_description">Frozen systems at the edge of survival.</p>
-                            <a href="forest.html" class="environment_link">Explore Forest <i class="fa fa-arrow-up"></i></a>
+                            <p class="environment_description">Ancient ecosystems shaped by rain, light, and time.</p>
+                            <a href="forest.html" class="environment_link">Explore Forest <i
+                                    class="fa fa-arrow-up"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="swiper-slide environment desert">
+                        <div class="environment_content">
+                            <p class="environment_eyebrow">03</p>
+                            <h3 class="environment_title">Desert</h3>
+                            <p class="environment_description">Life persists where water is scarce and extremes rule.
+                            </p>
+                            <a href="desert.html" class="environment_link">Explore Desert <i
+                                    class="fa fa-arrow-up"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="swiper-slide environment mountains">
+                        <div class="environment_content">
+                            <p class="environment_eyebrow">04</p>
+                            <h3 class="environment_title">Mountains</h3>
+                            <p class="environment_description">Life shaped by altitude, exposure, and isolation.</p>
+                            <a href="mountains.html" class="environment_link">Explore Mountains <i
+                                    class="fa fa-arrow-up"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="swiper-slide environment ocean">
+                        <div class="environment_content">
+                            <p class="environment_eyebrow">05</p>
+                            <h3 class="environment_title">Ocean</h3>
+                            <p class="environment_description">A vast living world extending far beneath the surface.
+                            </p>
+                            <a href="ocean.html" class="environment_link">Explore Ocean <i
+                                    class="fa fa-arrow-up"></i></a>
                         </div>
                     </article>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper_controls">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </section>
 
+        <section class="wild_stats">
+            <p class="wild_stats_eyebrow">03 / The Wild</p>
+            <h2 class="wild_stats_title">Earth, by the numbers.</h2>
+            <div class="stats_container">
+                <div class="stats">
+                    <p class="stats_value">71%</p>
+                    <p class="stats_description">Of Earth's surface is covered by ocean.</p>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Main end -->
 
@@ -137,7 +183,7 @@
             },
             pagination: {
                 el: '.swiper-pagination',
-                dynamicBullets: true,
+                dynamicBullets: false,
                 clickable: true,
             },
             autoplay: {

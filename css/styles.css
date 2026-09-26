@@ -3,56 +3,55 @@
 
 :root {
     /* Font size & Line height*/
-    /* link, eyebrow  */
+    /* (12px) small link, eyebrow  */
     --text-xs: 0.75rem;
-    /* 16 / 12 = 1.333 */
     --leading-xs: calc(1 / 0.75);
 
-    /* Nav link */
+    /* (14px) nav link */
     --text-sm: 0.875rem;
     --leading-sm: calc(1.25 / 0.875);
 
-    /* Description */
+    /* (16px) description */
     --text-base: 1rem;
     --leading-base: calc(1.5 / 1);
 
-    /* 18px */
+    /* (18px) */
     --text-lg: 1.125rem;
     --leading-lg: calc(1.75 / 1.125);
 
-    /* Brand */
+    /* (20px)brand */
     --text-xl: 1.25rem;
     --leading-xl: calc(1.75 / 1.25);
 
-    /* 24px */
+    /* (24px) */
     --text-2xl: 1.5rem;
     --leading-2xl: calc(2 / 1.5);
 
-    /* 30px */
+    /* (30px) */
     --text-3xl: 1.875rem;
     --leading-3xl: calc(2.25 / 1.875);
 
-    /* 36px */
+    /* (36px) */
     --text-4xl: 2.25rem;
     --leading-4xl: calc(2.5 / 2.25);
 
-    /* 48px */
+    /* (48px) */
     --text-5xl: 3rem;
     --leading-5xl: 1;
 
-    /* 60px */
+    /* (60px) */
     --text-6xl: 3.75rem;
     --leading-6xl: 1;
 
-    /* 72px */
+    /* (72px) */
     --text-7xl: 4.5rem;
     --leading-7xl: 1;
 
-    /* 96px */
+    /* (96px) */
     --text-8xl: 6rem;
     --leading-8xl: 1;
 
-    /* 128px */
+    /* (128px) */
     --text-9xl: 8rem;
     --leading-9xl: 1;
 
@@ -70,9 +69,32 @@
     --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
     --tracking-widest: 0.1em;
+
+    /* Colors */
+    --color-bg-light: #f1f0ec;
+    --color-bg-dark: #101010;
+
+    --color-text-light: #f5f5f5;
+    --color-text-dark: #161616;
+    --color-text-muted: #737373;
+
+    --color-border-light: rgba(255, 255, 255, 0.25);
+    --color-border-dark: rgba(0, 0, 0, 0.2);
+
+    /* Image overlays */
+    --overlay-bottom: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
+    --overlay-bottom-left: linear-gradient(45deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
+    --overlay-left: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
+    --overlay-top: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
+    --overlay-right: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%);
+    --overlay-dark: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+    /* Padding */
+    --section-padding: 8rem 2.5rem;
+
+    /* Section title size */
+    --section-title-size: clamp(2.5rem, 5vw, 5rem);
 }
-
-
 
 /* Remove default values */
 * {
@@ -112,7 +134,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     width: 100%;
     height: 80px;
 }
@@ -122,7 +144,7 @@ nav {
     font-size: var(--text-xl);
     font-weight: var(--font-bold);
     letter-spacing: var(--tracking-wider);
-    color: #f5f5f5;
+    color: var(--color-text-light);
     transition: opacity 0.2s ease;
 }
 
@@ -137,7 +159,7 @@ nav {
     font-size: var(--text-sm);
     font-weight: var(--font-medium);
     letter-spacing: var(--tracking-wider);
-    color: #f5f5f5;
+    color: var(--color-text-light);
     transition: opacity 0.2s ease;
 }
 
@@ -150,7 +172,7 @@ nav {
     top: 100%;
     left: 0;
     min-width: 180px;
-    background-color: rgba(10, 10, 10, 0.92);
+    background-color: var(--color-bg-dark);
     padding: 0.75rem 1rem;
     display: none;
     flex-direction: column;
@@ -162,7 +184,7 @@ nav {
     font-size: var(--text-xs);
     font-weight: var(--font-medium);
     letter-spacing: var(--tracking-wider);
-    color: #f5f5f5;
+    color: var(--color-text-light);
     transition: opacity 0.2s ease;
 }
 
@@ -196,8 +218,8 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 5rem 2.5rem;
-    color: #f5f5f5;
+    padding: var(--section-padding);
+    color: var(--color-text-light);
 }
 
 .hero_eyebrow {
@@ -211,8 +233,7 @@ nav {
 .hero_title {
     text-transform: uppercase;
     font-size: clamp(3rem, 7vw, 7rem);
-    /* line-height is a multiplier. line-height=0.9 * 7vw= 0.9 * 100.8px= 90.72px*/
-    line-height: 0.9;
+    line-height: var(--leading-9xl);
     font-weight: var(--font-semibold);
     /* the width of 12 "0" */
     max-width: 13ch;
@@ -235,8 +256,8 @@ nav {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem 4rem;
-    padding: 8rem 2.5rem;
-    background-color: #f1f0ec;
+    padding: var(--section-padding);
+    background-color: var(--color-bg-light);
     color: #161616;
 }
 
@@ -253,9 +274,10 @@ nav {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     text-transform: uppercase;
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 0.9;
+    font-size: var(--section-title-size);
+    line-height: var(--leading-9xl);
     font-weight: var(--font-semibold);
+    max-width: 14ch;
 }
 
 .intro_description {
@@ -265,7 +287,7 @@ nav {
     font-size: var(--text-base);
     line-height: var(--leading-base);
     font-weight: var(--font-normal);
-    max-width: 70ch;
+    max-width: 30ch;
 }
 
 /* Intro end */
@@ -275,13 +297,13 @@ nav {
 /* Explore start */
 .explore {
     padding: 8rem 0;
-    background-color: #101010;
-    color: #f5f5f5;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
 }
 
 .explore_content {
     padding: 0 2.5rem;
-    margin: 3rem;
+    margin-bottom: 3rem;
 }
 
 .explore_eyebrow {
@@ -294,25 +316,25 @@ nav {
 
 .explore_title {
     text-transform: uppercase;
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 0.9;
+    font-size: var(--section-title-size);
+    line-height: var(--leading-9xl);
     font-weight: var(--font-semibold);
     max-width: 16ch;
 }
 
 /* Arctic start */
 .environment {
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 3rem 2.5rem;
     gap: 1rem;
-    color: #f5f5f5;
+    color: var(--color-text-light);
 }
 
 .arctic {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5)0%, rgba(0, 0, 0, 0)100%), url("../assets/images/arctic1.jpg");
+    background: var(--overlay-bottom-left), url("../assets/images/arctic.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -327,12 +349,13 @@ nav {
     font-size: var(--text-xs);
     font-weight: var(--font-medium);
     letter-spacing: var(--tracking-widest);
+    margin-bottom: 1rem;
 }
 
 .environment_title {
     text-transform: uppercase;
     font-size: clamp(5rem, 7vw, 7rem);
-    line-height: 0.9;
+    line-height: var(--leading-9xl);
     font-weight: var(--font-semibold);
 }
 
@@ -340,18 +363,19 @@ nav {
     font-size: var(--text-base);
     line-height: var(--leading-base);
     font-weight: var(--font-normal);
-    max-width: 38ch;
+    margin-top: 1.5rem;
 }
 
 .environment_link {
-    color: #f5f5f5;
+    color: var(--color-text-light);
     text-transform: uppercase;
     font-size: var(--text-xs);
     font-weight: var(--font-medium);
     letter-spacing: var(--tracking-widest);
     align-self: flex-start;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid var(--color-text-light);
     padding-bottom: 0.3rem;
+    margin-top: 0.5rem;
 }
 
 .environment_link i {
@@ -362,14 +386,14 @@ nav {
 }
 
 .environment_link:hover i {
-    transform: rotate(45deg) translate(5px, -5px);
+    transform: rotate(45deg)translate(5px, -5px);
 }
 
 /* Arctic end */
 
 /* Forest start */
 .forest {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5)0%, rgba(0, 0, 0, 0)100%), url("../assets/images/forest.jpg");
+    background: var(--overlay-bottom-left), url("../assets/images/forest.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -377,8 +401,114 @@ nav {
 
 /* Forest end */
 
+/* Desert start */
+.desert {
+    background: var(--overlay-bottom-left), url("../assets/images/desert.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+/* Desert end */
+
+/* Mountains start */
+.mountains {
+    background: var(--overlay-bottom-left), url("../assets/images/mountains.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mountains end */
+
+/* Ocean start */
+.ocean {
+    background: var(--overlay-bottom-left), url("../assets/images/ocean.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ocean end */
+
+/* Swiper buttons start */
+.swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-color: var(--color-text-light);
+    --swiper-navigation-size: var(--text-xs);
+    transform: translateY(0.35rem);
+    opacity: 0.65;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+}
+
+.swiper-pagination {
+    --swiper-pagination-color: var(--color-text-light);
+    --swiper-pagination-bullet-inactive-color: var(--color-text-light);
+    --swiper-pagination-bullet-inactive-opacity: 0.65;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-size: 0.35rem;
+    --swiper-pagination-bullet-horizontal-gap: 0.35rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    transition: width 0.3s ease;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    width: 1.5rem;
+    border-radius: 999px;
+}
+
+.swiper_controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.swiper_controls .swiper-button-prev,
+.swiper_controls .swiper-button-next,
+.swiper_controls .swiper-pagination {
+    position: static;
+}
+
+/* Swiper buttons end */
 /* Explore end */
+
+/* Wild Statistics start*/
+.wild_stats {
+    padding: var(--section-padding);
+    background-color: var(--color-bg-light);
+    color: var(--color-bg-dark);
+}
+
+.wild_stats_eyebrow {
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    font-weight: var(--font-medium);
+    margin-bottom: 1rem;
+}
+
+.wild_stats_title {
+    text-transform: uppercase;
+    font-size: var(--section-title-size);
+    line-height: var(--leading-9xl);
+    font-weight: var(--font-semibold);
+    max-width: 13ch;
+}
+
+/* Wild Statistics end*/
 
 /* Main end */
 
