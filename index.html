@@ -9,20 +9,23 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
-
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Header start -->
-    <header>
-        <nav>
+    <header id="header">
+        <nav class="main_nav">
             <a href="index.html" class="brand">Untamed</a>
 
             <ul class="nav_list">
@@ -59,81 +62,75 @@
 
 
     <!-- Main start -->
-    <main>
+    <main id="main">
 
         <section class="hero">
-            <div class="hero_content">
-                <p class="hero_eyebrow">Wilderness / 01</p>
-                <h1 class="hero_title">Earth's Last Wilderness</h1>
+            <!-- I use div to move all of the contents to bottom -->
+
+            <p class="hero_eyebrow">A field guide to the wild</p>
+            <h1 class="hero_title">Wilderness</h1>
+            <div class="hero_bottom">
                 <p class="hero_description">Remote landscapes shaped by climate, time, and life&mdash;places where
                     nature still sets the rules.</p>
+                <a href="#intro" class="hero_link">Discover the wild <i class="fa fa-arrow-down"></i></a>
             </div>
+
         </section>
 
-        <section class="intro">
+        <section id="intro" class="intro">
+            <!-- The precious thing about this assignment is that I've learned new properties and values. -->
             <p class="intro_eyebrow">01 / Wilderness</p>
-            <h2 class="intro_title">What remains wild?</h2>
+            <h2 class="intro_title" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">What remains
+                wild?</h2>
             <p class="intro_description">Wilderness is where natural systems continue to shape the landscape with
                 limited human interference.</p>
         </section>
 
         <section id="explore" class="explore">
+            <!-- I use div to give the contents a padding without interfering the swiper. -->
             <div class="explore_content">
                 <p class="explore_eyebrow">02 / Explore</p>
                 <h2 class="explore_title">Five worlds. One wild earth.</h2>
             </div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    <!-- I change the default div to semantic article cuz each slide has its own story. -->
                     <article class="swiper-slide environment arctic">
-                        <div class="environment_content">
-                            <p class="environment_eyebrow">01</p>
-                            <h3 class="environment_title">Arctic</h3>
-                            <p class="environment_description">Frozen systems at the edge of survival.</p>
-                            <a href="arctic.html" class="environment_link">Explore Arctic <i
-                                    class="fa fa-arrow-up"></i></a>
-                        </div>
+                        <p class="environment_eyebrow">01</p>
+                        <h3 class="environment_title">Arctic</h3>
+                        <p class="environment_description">Frozen systems at the edge of survival.</p>
+                        <a href="arctic.html" class="environment_link">Explore Arctic <i class="fa fa-arrow-up"></i></a>
                     </article>
 
                     <article class="swiper-slide environment forest">
-                        <div class="environment_content">
-                            <p class="environment_eyebrow">02</p>
-                            <h3 class="environment_title">Forest</h3>
-                            <p class="environment_description">Ancient ecosystems shaped by rain, light, and time.</p>
-                            <a href="forest.html" class="environment_link">Explore Forest <i
-                                    class="fa fa-arrow-up"></i></a>
-                        </div>
+                        <p class="environment_eyebrow">02</p>
+                        <h3 class="environment_title">Forest</h3>
+                        <p class="environment_description">Ancient ecosystems shaped by rain, light, and time.</p>
+                        <a href="forest.html" class="environment_link">Explore Forest <i class="fa fa-arrow-up"></i></a>
                     </article>
 
                     <article class="swiper-slide environment desert">
-                        <div class="environment_content">
-                            <p class="environment_eyebrow">03</p>
-                            <h3 class="environment_title">Desert</h3>
-                            <p class="environment_description">Life persists where water is scarce and extremes rule.
-                            </p>
-                            <a href="desert.html" class="environment_link">Explore Desert <i
-                                    class="fa fa-arrow-up"></i></a>
-                        </div>
+                        <p class="environment_eyebrow">03</p>
+                        <h3 class="environment_title">Desert</h3>
+                        <p class="environment_description">Life persists where water is scarce and extremes rule.
+                        </p>
+                        <a href="desert.html" class="environment_link">Explore Desert <i class="fa fa-arrow-up"></i></a>
                     </article>
 
                     <article class="swiper-slide environment mountains">
-                        <div class="environment_content">
-                            <p class="environment_eyebrow">04</p>
-                            <h3 class="environment_title">Mountains</h3>
-                            <p class="environment_description">Life shaped by altitude, exposure, and isolation.</p>
-                            <a href="mountains.html" class="environment_link">Explore Mountains <i
-                                    class="fa fa-arrow-up"></i></a>
-                        </div>
+                        <p class="environment_eyebrow">04</p>
+                        <h3 class="environment_title">Mountains</h3>
+                        <p class="environment_description">Life shaped by altitude, exposure, and isolation.</p>
+                        <a href="mountains.html" class="environment_link">Explore Mountains <i
+                                class="fa fa-arrow-up"></i></a>
                     </article>
 
                     <article class="swiper-slide environment ocean">
-                        <div class="environment_content">
-                            <p class="environment_eyebrow">05</p>
-                            <h3 class="environment_title">Ocean</h3>
-                            <p class="environment_description">A vast living world extending far beneath the surface.
-                            </p>
-                            <a href="ocean.html" class="environment_link">Explore Ocean <i
-                                    class="fa fa-arrow-up"></i></a>
-                        </div>
+                        <p class="environment_eyebrow">05</p>
+                        <h3 class="environment_title">Ocean</h3>
+                        <p class="environment_description">A vast living world extending far beneath the surface.
+                        </p>
+                        <a href="ocean.html" class="environment_link">Explore Ocean <i class="fa fa-arrow-up"></i></a>
                     </article>
                 </div>
                 <div class="swiper_controls">
@@ -148,10 +145,82 @@
             <p class="wild_stats_eyebrow">03 / The Wild</p>
             <h2 class="wild_stats_title">Earth, by the numbers.</h2>
             <div class="stats_container">
-                <div class="stats">
-                    <p class="stats_value">71%</p>
-                    <p class="stats_description">Of Earth's surface is covered by ocean.</p>
+                <div class="stat first" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
+                    <p class="stat_number">71%</p>
+                    <p class="stat_description">Of Earth's surface is covered by ocean.</p>
+                    <a href="" class="stat_source">Source: NOAA <i class="fa fa-arrow-up"></i></a>
                 </div>
+
+                <div class="stat second" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="1000">
+                    <p class="stat_number">31.8%</p>
+                    <p class="stat_description">Of global land area is covered by forest.</p>
+                    <a href="" class="stat_source">Source: UN / 2025 <i class="fa fa-arrow-up"></i></a>
+                </div>
+
+                <div class="stat third" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="1000">
+                    <p class="stat_number">27%</p>
+                    <p class="stat_description">Of Earth's land surface is mountains.</p>
+                    <a href="" class="stat_source">Source: Mountain Partnership <i class="fa fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="perspective">
+            <p class="perspective_eyebrow">04 / Perspective</p>
+            <h2 class="perspective_title">Still wild.</h2>
+            <p class="perspective_description">Wilderness is not defined by emptiness, but by natural systems that still
+                operate on their own terms.</p>
+        </section>
+
+        <section class="journal">
+            <div class="journal_content">
+                <p class="journal_eyebrow">05 / Field journal</p>
+                <h2 class="journal_title">Read the landscape.</h2>
+            </div>
+
+            <article class="article">
+                <figure>
+                    <img src="assets/images/field-river.jpg"
+                        alt="Aerial view of a blur river cutting through green Icelandic terrain." class="article_img">
+                    <figcaption>River rapids, Iceland.</figcaption>
+                </figure>
+                <div class="article_content">
+                    <p class="article_eyebrow">01 / Water in motion</p>
+                    <h3 class="article_title">Every river connects a world.</h3>
+                    <p class="article_description">Water follows the terrain, cuts channels, and carries sediment
+                        downstream.</p>
+                    <p class="article_description">Slopes, banks, and vegetation belong to the same catchment.
+                        Changes
+                        upstream can travel far beyond where they began.</p>
+                    <a href="mountains.html#field_study" class="article_link">Follow the water <i
+                            class="fa fa-arrow-up"></i></a>
+                </div>
+            </article>
+
+            <article class="article">
+                <figure>
+                    <img src="assets/images/field-rock.jpg"
+                        alt="Layered red and pale canyon walls fall beneath a wooded plateau" class="article_img">
+                    <figcaption>River rapids, Iceland.</figcaption>
+                </figure>
+                <div class="article_content">
+                    <p class="article_eyebrow">02 / Deep time</p>
+                    <h3 class="article_title">The earth leaves a record.</h3>
+                    <p class="article_description">A canyon exposes layers of rock formed over time.</p>
+                    <p class="article_description">Deposition, uplift, weathering, and erosion continue to shape the
+                        landscape across different timescales.</p>
+                    <a href="desert.html#story" class="article_link">Read the desert <i class="fa fa-arrow-up"></i></a>
+                </div>
+            </article>
+        </section>
+
+        <section class="about_teaser">
+            <p class="about_teaser_eyebrow">05 / About</p>
+            <h2 class="about_teaser_title" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">The wild
+                is<br> a system,<br> not a scenery.</h2>
+            <div class="about_teaser_content">
+                <p class="about_teaser_description">Wilderness is shaped by climate, geology, water, life, and time.</p>
+                <a href="about.html" class="about_teaser_link">About UNTAMED <i class="fa fa-arrow-up"></i></a>
             </div>
         </section>
     </main>
@@ -160,7 +229,50 @@
 
 
     <!-- Footer start -->
-    <footer></footer>
+    <footer id="footer">
+        <a href="index.html" class="footer_brand">Untamed</a>
+
+        <div class="footer_middle">
+            <div class="footer_content">
+
+
+            </div>
+
+            <nav class="footer_nav">
+                <ul class="footer_nav_list">
+                    <li class="footer_nav_item">
+                        <a href="arctic.html" class="footer_nav_link">Arctic</a>
+                    </li>
+
+                    <li class="footer_nav_item">
+                        <a href="forest.html" class="footer_nav_link">Forest</a>
+                    </li>
+
+                    <li class="footer_nav_item">
+                        <a href="desert.html" class="footer_nav_link">Desert</a>
+                    </li>
+
+                    <li class="footer_nav_item">
+                        <a href="mountains.html" class="footer_nav_link">Mountains</a>
+                    </li>
+
+                    <li class="footer_nav_item">
+                        <a href="ocean.html" class="footer_nav_link">Ocean</a>
+                    </li>
+
+                    <li class="footer_nav_item">
+                        <a href="about.html" class="footer_nav_link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer_bottom">
+            <p>&copy;2026 Untamed. All rights reserved.</p>
+            <p>An independent exploration of the natural world.</p>
+            <a href="#header" class="footer_bottom_link">Back to top <i class="fa fa-arrow-up"></i></a>
+        </div>
+    </footer>
     <!-- Footer end -->
 
 
@@ -168,6 +280,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -194,6 +309,11 @@
                 enabled: true,
             },
         });
+    </script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
     </script>
 </body>
 
