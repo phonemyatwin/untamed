@@ -14,7 +14,7 @@
     --color-bg-desert: #ded5c4;
     --color-bg-ocean-primary: #101f29;
     --color-bg-ocean-secondary: #182e3a;
-    --color-button:#D5DDD0;
+    --color-button: #D5DDD0;
 
     /* Text colors */
     --color-text-light: #f5f5f0;
@@ -222,6 +222,18 @@ header {
     position: relative;
 }
 
+.nav_link.active::before,
+.nested_link.active::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-bg-dark);
+}
+
+
 .nav_link::after,
 .nested_link::after {
     position: absolute;
@@ -248,6 +260,7 @@ header {
 
 
 /* Main start */
+/* Index page */
 main {
     background-color: var(--color-bg-light-primary);
     color: var(--color-text-dark);
@@ -262,7 +275,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     color: var(--color-text-light);
-    padding: 3rem var(--gutter);
+    padding:1rem var(--gutter);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -792,6 +805,81 @@ figcaption {
 }
 
 /* About teaser end */
+/* Index page */
+
+
+
+/* Arctic */
+.hero.arctic {
+    background: var(--overlay-dark), url("../assets/images/arctic-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Arctic */
+
+
+
+/* Forest */
+.hero.forest {
+    background: var(--overlay-dark), url("../assets/images/forest-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Forest */
+
+
+
+/* Desert */
+.hero.desert {
+    background: var(--overlay-dark), url("../assets/images/desert-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Desert */
+
+
+
+/* Mountains */
+.hero.mountains {
+    background: var(--overlay-dark), url("../assets/images/mountains-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mountains */
+
+
+
+
+
+/* Ocean */
+.hero.ocean {
+    background: var(--overlay-dark), url("../assets/images/ocean-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ocean */
+
+
+
+/* About */
+.hero.about {
+    background: var(--overlay-dark), url("../assets/images/about-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* About */
 /* Main end */
 
 
