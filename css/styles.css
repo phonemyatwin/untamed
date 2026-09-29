@@ -270,12 +270,12 @@ main {
 .hero {
     position: relative;
     min-height: 100vh;
-    background: var(--overlay-dark), url("../assets/image/alaska.jpg");
+    background: var(--overlay-dark), url("../images/home/home_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: var(--color-text-light);
-    padding:1rem var(--gutter);
+    padding: 1rem var(--gutter);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -452,23 +452,23 @@ main {
 }
 
 .arctic {
-    background: var(--overlay-bottom-left), url("../assets/images/arctic.jpg");
+    background: var(--overlay-bottom-left), url("../images/arctic/arctic_slide.jpg");
 }
 
 .forest {
-    background: var(--overlay-bottom-left), url("../assets/images/forest.jpg");
+    background: var(--overlay-bottom-left), url("../images/forest/forest_slide.jpg");
 }
 
 .desert {
-    background: var(--overlay-bottom-left), url("../assets/images/desert.jpg");
+    background: var(--overlay-bottom-left), url("../images/desert/desert_slide.jpg");
 }
 
 .mountains {
-    background: var(--overlay-bottom-left), url("../assets/images/mountains.jpg");
+    background: var(--overlay-bottom-left), url("../images/mountains/mountains_slide.jpg");
 }
 
 .ocean {
-    background: var(--overlay-bottom-left), url("../assets/images/ocean.jpg");
+    background: var(--overlay-bottom-left), url("../images/ocean/ocean_slide.jpg");
 }
 
 .environment_title {
@@ -649,7 +649,7 @@ main {
 /* Perspective start */
 .perspective {
     min-height: 100vh;
-    background: var(--overlay-dark), url("../assets/images/coastline.jpg");
+    background: var(--overlay-dark), url("../images/home/coastline.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -811,7 +811,7 @@ figcaption {
 
 /* Arctic */
 .hero.arctic {
-    background: var(--overlay-dark), url("../assets/images/arctic-hero.jpg");
+    background: var(--overlay-dark), url("../images/arctic/arctic_slide.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -823,7 +823,7 @@ figcaption {
 
 /* Forest */
 .hero.forest {
-    background: var(--overlay-dark), url("../assets/images/forest-hero.jpg");
+    background: var(--overlay-dark), url("../images/forest/forest_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -835,7 +835,7 @@ figcaption {
 
 /* Desert */
 .hero.desert {
-    background: var(--overlay-dark), url("../assets/images/desert-hero.jpg");
+    background: var(--overlay-dark), url("../images/desert/desert_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -847,7 +847,7 @@ figcaption {
 
 /* Mountains */
 .hero.mountains {
-    background: var(--overlay-dark), url("../assets/images/mountains-hero.jpg");
+    background: var(--overlay-dark), url("../images/mountains/mountains_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -861,7 +861,7 @@ figcaption {
 
 /* Ocean */
 .hero.ocean {
-    background: var(--overlay-dark), url("../assets/images/ocean-hero.jpg");
+    background: var(--overlay-dark), url("../images/ocean/ocean_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -873,7 +873,7 @@ figcaption {
 
 /* About */
 .hero.about {
-    background: var(--overlay-dark), url("../assets/images/about-hero.jpg");
+    background: var(--overlay-dark), url("../images/about/about_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
