@@ -24,41 +24,56 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="home">
 
     <!-- Header start -->
     <header id="header">
-        <nav class="main_nav">
-            <a href="index.html" class="brand">Untamed</a>
+        <a href="index.html" class="header_brand">Untamed</a>
 
-            <ul class="nav_list">
-                <li class="nav_item dropdown">
-                    <a href="index.html#explore" class="nav_link active">Explore</a>
+        <div class="header_group">
+            <a href="about.html" class="nav_link">About</a>
 
-                    <ul class="nested_list">
-                        <li class="nested_item">
-                            <a href="arctic.html" class="nested_link">Arctic</a>
-                        </li>
-                        <li class="nested_item">
-                            <a href="forest.html" class="nested_link">Forest</a>
-                        </li>
-                        <li class="nested_item">
-                            <a href="desert.html" class="nested_link">Desert</a>
-                        </li>
-                        <li class="nested_item">
-                            <a href="mountains.html" class="nested_link">Mountains</a>
-                        </li>
-                        <li class="nested_item">
-                            <a href="ocean.html" class="nested_link">Ocean</a>
-                        </li>
-                    </ul>
-                </li>
+            <details class="header_nav_details">
+                <summary class="header_nav_summary">Explore <span class="header_nav_btn"></span></summary>
 
-                <li class="nav_item">
-                    <a href="about.html" class="nav_link">About</a>
-                </li>
-            </ul>
-        </nav>
+                <nav class="header_nav">
+
+                    <div class="header_nav_content">
+                        <p class="header_nav_eyebrow">The wilderness index</p>
+                        <p class="header_nav_title">Find your wild.</p>
+                        <a href="#explore" class="section_link">View all environments <span
+                                class="north_east_arrow">&nearr;</span></a>
+                    </div>
+
+                    <ol class="header_nav_list">
+                        <li class="header_nav_item">
+                            <a href="arctic.html" class="header_nav_link"><span class="header_nav_number">01</span>
+                                Arctic <span class="north_east_arrow">&nearr;</span></a>
+                        </li>
+
+                        <li class="header_nav_item">
+                            <a href="forest.html" class="header_nav_link"><span class="header_nav_number">02</span>
+                                Forest <span class="north_east_arrow">&nearr;</span></a>
+                        </li>
+
+                        <li class="header_nav_item">
+                            <a href="desert.html" class="header_nav_link"><span class="header_nav_number">03</span>
+                                Desert <span class="north_east_arrow">&nearr;</span></a>
+                        </li>
+
+                        <li class="header_nav_item">
+                            <a href="mountains.html" class="header_nav_link"><span class="header_nav_number">04</span>
+                                Mountains <span class="north_east_arrow">&nearr;</span></a>
+                        </li>
+
+                        <li class="header_nav_item">
+                            <a href="ocean.html" class="header_nav_link"><span class="header_nav_number">05</span> Ocean
+                                <span class="north_east_arrow">&nearr;</span></a>
+                        </li>
+                    </ol>
+                </nav>
+            </details>
+        </div>
     </header>
     <!-- Header end -->
 
@@ -68,21 +83,18 @@
     <main id="main">
 
         <section class="hero">
-            <!-- I use div to move all of the contents to bottom -->
-
             <p class="hero_eyebrow">A field guide to the wild</p>
             <h1 class="hero_title">Wilderness</h1>
-            <div class="hero_bottom">
+            <div class="hero_content">
                 <p class="hero_description">Remote landscapes shaped by climate, time, and life&mdash;places where
                     nature still sets the rules.</p>
-                <a href="#intro" class="hero_link">Discover the wild <i class="fa fa-arrow-down"></i></a>
+                <a href="#intro" class="hero_link">Discover the wild <span class="down_arrow">&darr;</span></a>
             </div>
 
         </section>
 
         <section id="intro" class="intro">
-            <!-- The precious thing about this assignment is that I've learned new properties and values. -->
-            <p class="intro_eyebrow">01 / Wilderness</p>
+            <p class="section_eyebrow">01 / Wilderness</p>
             <h2 class="intro_title" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">What remains
                 wild?</h2>
             <p class="intro_description">Wilderness is where natural systems continue to shape the landscape with
@@ -90,9 +102,9 @@
         </section>
 
         <section id="explore" class="explore">
-            <!-- I use div to give the contents a padding without interfering the swiper. -->
+            <!-- I use div here to give the padding only to the contents, without affecting the swiper. -->
             <div class="explore_content">
-                <p class="explore_eyebrow">02 / Explore</p>
+                <p class="section_eyebrow">02 / Explore</p>
                 <h2 class="explore_title">Five worlds. One wild earth.</h2>
             </div>
             <div class="swiper mySwiper">
@@ -102,14 +114,16 @@
                         <p class="environment_eyebrow">01</p>
                         <h3 class="environment_title">Arctic</h3>
                         <p class="environment_description">Frozen systems at the edge of survival.</p>
-                        <a href="arctic.html" class="environment_link">Explore Arctic <i class="fa fa-arrow-up"></i></a>
+                        <a href="arctic.html" class="section_link">Explore Arctic <span
+                                class="north_east_arrow">&nearr;</span></a>
                     </article>
 
                     <article class="swiper-slide environment forest">
                         <p class="environment_eyebrow">02</p>
                         <h3 class="environment_title">Forest</h3>
                         <p class="environment_description">Ancient ecosystems shaped by rain, light, and time.</p>
-                        <a href="forest.html" class="environment_link">Explore Forest <i class="fa fa-arrow-up"></i></a>
+                        <a href="forest.html" class="section_link">Explore Forest <span
+                                class="north_east_arrow">&nearr;</span></a>
                     </article>
 
                     <article class="swiper-slide environment desert">
@@ -117,15 +131,16 @@
                         <h3 class="environment_title">Desert</h3>
                         <p class="environment_description">Life persists where water is scarce and extremes rule.
                         </p>
-                        <a href="desert.html" class="environment_link">Explore Desert <i class="fa fa-arrow-up"></i></a>
+                        <a href="desert.html" class="section_link">Explore Desert <span
+                                class="north_east_arrow">&nearr;</span></a>
                     </article>
 
                     <article class="swiper-slide environment mountains">
                         <p class="environment_eyebrow">04</p>
                         <h3 class="environment_title">Mountains</h3>
                         <p class="environment_description">Life shaped by altitude, exposure, and isolation.</p>
-                        <a href="mountains.html" class="environment_link">Explore Mountains <i
-                                class="fa fa-arrow-up"></i></a>
+                        <a href="mountains.html" class="section_link">Explore Mountains <span
+                                class="north_east_arrow">&nearr;</span></a>
                     </article>
 
                     <article class="swiper-slide environment ocean">
@@ -133,7 +148,8 @@
                         <h3 class="environment_title">Ocean</h3>
                         <p class="environment_description">A vast living world extending far beneath the surface.
                         </p>
-                        <a href="ocean.html" class="environment_link">Explore Ocean <i class="fa fa-arrow-up"></i></a>
+                        <a href="ocean.html" class="section_link">Explore Ocean <span
+                                class="north_east_arrow">&nearr;</span></a>
                     </article>
                 </div>
                 <div class="swiper_controls">
@@ -145,31 +161,35 @@
         </section>
 
         <section class="wild_stats">
-            <p class="wild_stats_eyebrow">03 / The Wild</p>
+            <p class="section_eyebrow">03 / The Wild</p>
             <h2 class="wild_stats_title">Earth, by the numbers.</h2>
             <div class="stats_container">
                 <div class="stat first" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
                     <p class="stat_number">71%</p>
                     <p class="stat_description">Of Earth's surface is covered by ocean.</p>
-                    <a href="" class="stat_source">Source: NOAA <i class="fa fa-arrow-up"></i></a>
+                    <a href="https://oceanservice.noaa.gov/facts/sea-surface-temperature.html"
+                        class="resource_link">Source: NOAA <span class="north_east_arrow">&nearr;</span></a>
                 </div>
 
                 <div class="stat second" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
                     <p class="stat_number">31.8%</p>
                     <p class="stat_description">Of global land area is covered by forest.</p>
-                    <a href="" class="stat_source">Source: UN / 2025 <i class="fa fa-arrow-up"></i></a>
+                    <a href="https://sdgs.un.org/goals/goal15" class="resource_link">Source: UN / 2025 <span
+                            class="north_east_arrow">&nearr;</span></a>
                 </div>
 
                 <div class="stat third" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">
                     <p class="stat_number">27%</p>
                     <p class="stat_description">Of Earth's land surface is mountains.</p>
-                    <a href="" class="stat_source">Source: Mountain Partnership <i class="fa fa-arrow-up"></i></a>
+                    <a href="https://www.fao.org/mountain-partnership/our-work/communications/en"
+                        class="resource_link">Source: Mountain Partnership <span
+                            class="north_east_arrow">&nearr;</span></a>
                 </div>
             </div>
         </section>
 
         <section class="perspective">
-            <p class="perspective_eyebrow">04 / Perspective</p>
+            <p class="section_eyebrow">04 / Perspective</p>
             <h2 class="perspective_title">Still wild.</h2>
             <p class="perspective_description">Wilderness is not defined by emptiness, but by natural systems that still
                 operate on their own terms.</p>
@@ -177,53 +197,60 @@
 
         <section id="journal" class="journal">
             <div class="journal_content">
-                <p class="journal_eyebrow">05 / Field journal</p>
+                <p class="section_eyebrow">05 / Field journal</p>
                 <h2 class="journal_title">Read the landscape.</h2>
             </div>
 
-            <article class="article">
-                <figure>
-                    <img src="images/home/field-river.jpg"
-                        alt="Aerial view of a blur river cutting through green Icelandic terrain." class="article_img">
-                    <figcaption>River rapids, Iceland.</figcaption>
-                </figure>
-                <div class="article_content">
-                    <p class="article_eyebrow">01 / Water in motion</p>
-                    <h3 class="article_title">Every river connects a world.</h3>
-                    <p class="article_description">Water follows the terrain, cuts channels, and carries sediment
+            <article class="journal_template">
+                <div class="journal_template_content">
+                    <p class="journal_template_eyebrow">01 / Water in motion</p>
+                    <h3 class="journal_template_title">Every river connects a world.</h3>
+                    <p class="journal_template_description">Water follows the terrain, cuts channels, and carries
+                        sediment
                         downstream.</p>
-                    <p class="article_description">Slopes, banks, and vegetation belong to the same catchment.
+                    <p class="journal_template_description">Slopes, banks, and vegetation belong to the same catchment.
                         Changes
                         upstream can travel far beyond where they began.</p>
-                    <a href="mountains.html#field_study" class="article_link">Follow the water <i
-                            class="fa fa-arrow-up"></i></a>
+                    <a href="mountains.html#field_study" class="section_link">Follow the water <span
+                            class="north_east_arrow">&nearr;</span></a>
                 </div>
-            </article>
-
-            <article class="article">
-                <figure>
-                    <img src="images/home/field-rock.jpg"
-                        alt="Layered red and pale canyon walls fall beneath a wooded plateau" class="article_img">
+                <figure class="journal_template_media">
+                    <img src="images/home/field-river.jpg"
+                        alt="Aerial view of a blur river cutting through green Icelandic terrain."
+                        class="journal_template_img">
                     <figcaption>River rapids, Iceland.</figcaption>
                 </figure>
-                <div class="article_content">
-                    <p class="article_eyebrow">02 / Deep time</p>
-                    <h3 class="article_title">The earth leaves a record.</h3>
-                    <p class="article_description">A canyon exposes layers of rock formed over time.</p>
-                    <p class="article_description">Deposition, uplift, weathering, and erosion continue to shape the
+            </article>
+
+            <article class="journal_template">
+                <figure class="journal_template_media">
+                    <img src="images/home/field-rock.jpg"
+                        alt="Layered red and pale canyon walls fall beneath a wooded plateau"
+                        class="journal_template_img">
+                    <figcaption>River rapids, Iceland.</figcaption>
+                </figure>
+                <div class="journal_template_content">
+                    <p class="journal_template_eyebrow">02 / Deep time</p>
+                    <h3 class="journal_template_title">The earth leaves a record.</h3>
+                    <p class="journal_template_description">A canyon exposes layers of rock formed over time.</p>
+                    <p class="journal_template_description">Deposition, uplift, weathering, and erosion continue to
+                        shape the
                         landscape across different timescales.</p>
-                    <a href="desert.html#story" class="article_link">Read the desert <i class="fa fa-arrow-up"></i></a>
+                    <a href="desert.html#story" class="section_link">Read the desert <span
+                            class="north_east_arrow">&nearr;</span></a>
                 </div>
             </article>
         </section>
 
-        <section class="about_teaser">
-            <p class="about_teaser_eyebrow">05 / About</p>
-            <h2 class="about_teaser_title" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">The wild
+        <section class="section_about">
+            <p class="section_eyebrow">06 / About</p>
+            <h2 class="section_about_title" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1000">The wild
                 is<br> a system,<br> not a scenery.</h2>
-            <div class="about_teaser_content">
-                <p class="about_teaser_description">Wilderness is shaped by climate, geology, water, life, and time.</p>
-                <a href="about.html" class="about_teaser_link">About UNTAMED <i class="fa fa-arrow-up"></i></a>
+            <div class="section_about_content">
+                <p class="section_about_description">Wilderness is shaped by climate, geology, water, life, and time.
+                </p>
+                <a href="about.html" class="section_link">About UNTAMED <span
+                        class="north_east_arrow">&nearr;</span></a>
             </div>
         </section>
     </main>
@@ -241,43 +268,51 @@
                 <h2 class="footer_title">Beyond the view.</h2>
                 <p class="footer_description">Water, rock, climate, and life. Understand the forces behind the
                     landscapes.</p>
-                <a href="#journal" class="footer_button">Read the field journal <i class="fa fa-arrow-up"></i></a>
-                <a href="about.html" class="footer_link">Why UNTAMED <i class="fa fa-arrow-up"></i></a>
+                <a href="#journal" class="footer_button">Read the field journal <span
+                        class="north_east_arrow">&nearr;</span></a>
+                <a href="about.html" class="section_link">Why UNTAMED <span class="north_east_arrow">&nearr;</span></a>
             </div>
 
             <nav class="footer_nav">
                 <ol class="footer_nav_list">
                     <li class="footer_nav_item">
-                        <a href="arctic.html" class="footer_nav_link"><span>01</span>Arctic</a>
+                        <a href="arctic.html" class="footer_nav_link"><span class="footer_nav_number">01</span>Arctic
+                            <span class="north_east_arrow">&nearr;</span></a>
                     </li>
 
                     <li class="footer_nav_item">
-                        <a href="forest.html" class="footer_nav_link"><span>02</span>Forest</a>
+                        <a href="forest.html" class="footer_nav_link"><span class="footer_nav_number">02</span>Forest
+                            <span class="north_east_arrow">&nearr;</span></a>
                     </li>
 
                     <li class="footer_nav_item">
-                        <a href="desert.html" class="footer_nav_link"><span>03</span>Desert</a>
+                        <a href="desert.html" class="footer_nav_link"><span class="footer_nav_number">03</span>Desert
+                            <span class="north_east_arrow">&nearr;</span></a>
                     </li>
 
                     <li class="footer_nav_item">
-                        <a href="mountains.html" class="footer_nav_link"><span>04</span>Mountains</a>
+                        <a href="mountains.html" class="footer_nav_link"><span
+                                class="footer_nav_number">04</span>Mountains <span
+                                class="north_east_arrow">&nearr;</span></a>
                     </li>
 
                     <li class="footer_nav_item">
-                        <a href="ocean.html" class="footer_nav_link"><span>05</span>Ocean</a>
+                        <a href="ocean.html" class="footer_nav_link"><span class="footer_nav_number">05</span>Ocean
+                            <span class="north_east_arrow">&nearr;</span></a>
                     </li>
 
                     <li class="footer_nav_item">
-                        <a href="about.html" class="footer_nav_link "><span>06</span>About</a>
+                        <a href="about.html" class="footer_nav_link "><span class="footer_nav_number">06</span>About
+                            <span class="north_east_arrow">&nearr;</span></a>
                     </li>
                 </ol>
             </nav>
         </div>
 
         <div class="footer_bottom">
-            <p>&copy;2026 Untamed. All rights reserved.</p>
+            <p>&copy;2026 UNTAMED. All rights reserved.</p>
             <p>Developed by Phone Myat Win.</p>
-            <a href="#header" class="footer_bottom_link">Back to top <i class="fa fa-arrow-up"></i></a>
+            <a href="#header" class="footer_bottom_link">Back to top <span class="up_arrow">&uarr;</span></a>
         </div>
     </footer>
     <!-- Footer end -->
