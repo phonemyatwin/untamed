@@ -20,6 +20,7 @@
     --color-text-light: #f5f5f0;
     --color-text-white: #ffffff;
     --color-text-dark: #161916;
+    --color-text-black: #000000;
     --color-text-forest: #e8ebe2;
     --color-text-ocean: #e2e9eb;
     --color-text-muted-primary: #62665e;
@@ -169,7 +170,7 @@ figcaption {
 .footer_nav_link:hover,
 .footer_bottom_link:hover,
 .resource_link:hover,
-.next_page_link:hover,.note_summary:hover {
+.next_page_link:hover {
     opacity: 0.7;
 }
 
@@ -271,15 +272,17 @@ header:has(.header_nav_details[open]) {
     left: 0;
     width: 1rem;
     height: 1px;
-    background: var(--color-text-light);
+    background: var(--color-text-white);
 }
 
-.header_nav_btn::after, .note_btn::after {
+.header_nav_btn::after,
+.note_btn::after {
     transform: rotate(90deg);
     transition: transform 0.3s ease;
 }
 
-.header_nav_details[open] .header_nav_btn::after, .note_details[open] .note_btn::after {
+.header_nav_details[open] .header_nav_btn::after,
+.note_details[open] .note_btn::after {
     transform: rotate(180deg);
 }
 
@@ -925,10 +928,11 @@ main {
 
 /* Reading notes start */
 .reading_notes {
-    padding: var(--gutter);
+    padding: 10rem var(--gutter);
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     align-items: start;
+    /* gap: 5rem; */
 }
 
 .reading_notes_content {
@@ -947,8 +951,14 @@ main {
 }
 
 .note_details {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--color-border-dark);
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.note_details.add{
+    border-bottom:1px solid var(--color-border-dark) ;
 }
 
 .note_summary {
@@ -961,11 +971,35 @@ main {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: opacity 0.2s ease;
 }
 
-.note_btn::before, .note_btn::after{
-    background-color: var(--color-bg-dark);
+.note_btn::before,
+.note_btn::after {
+    background-color: var(--color-text-black);
+}
+
+.note_description {
+    max-width: 53ch;
+    margin-top: 1.5rem;
+}
+
+.resource{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--fs-sm);
+}
+
+.resource .resource_link{
+    color: var(--color-text-dark);
+    font-size: var(--fs-sm);
+    border-bottom: 1px solid var(--color-text-dark);
+    gap: 0.5rem;
+}
+
+.resource_link .north_east_arrow{
+    font-size: var(--fs-sm);
 }
 /* Reading notes end */
 
