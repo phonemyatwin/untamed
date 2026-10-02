@@ -793,7 +793,8 @@ main {
 
 .arctic .intro,
 .desert .intro,
-.mountains .intro {
+.mountains .intro,
+.ocean .intro {
     padding: 12rem var(--gutter);
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -801,7 +802,8 @@ main {
 
 .arctic .intro_title,
 .desert .intro_title,
-.mountains .intro_title {
+.mountains .intro_title,
+.ocean .intro_title {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     font-size: 6vw;
@@ -809,7 +811,8 @@ main {
 
 .arctic .intro_description,
 .desert .intro_description,
-.mountains .intro_description {
+.mountains .intro_description,
+.ocean .intro_description {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     max-width: 50ch;
@@ -817,7 +820,8 @@ main {
 
 .arctic .intro_description:last-child,
 .desert .intro_description:last-child,
-.mountains .intro_description:last-child {
+.mountains .intro_description:last-child,
+.ocean .intro_description:last-child {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
@@ -1176,17 +1180,21 @@ main {
 
 /* Feature start */
 .desert .feature,
-.mountains .field_study {
+.mountains .field_study,
+.ocean .feature {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .desert .feature_title,
-.mountains .field_study_title {
+.mountains .field_study_title,
+.ocean .feature_title {
     max-width: 12ch;
 }
 
-.desert .feature_description, .mountains .field_study_description_group {
+.desert .feature_description,
+.mountains .field_study_description_group,
+.ocean .feature_description {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     justify-self: end;
@@ -1195,7 +1203,8 @@ main {
 }
 
 .desert .feature_media,
-.mountains .field_study_media {
+.mountains .field_study_media,
+.ocean .feature_media {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     aspect-ratio: 16 / 9;
@@ -1227,33 +1236,38 @@ main {
 .mountains .intro_title {
     max-width: 8.6ch;
 }
+
 /* Intro end */
 
 /* Feature start */
-.mountains .feature{
+.mountains .feature {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
 }
+
 /* Feature end */
 
 /* Field study start */
-.mountains .field_study{
+.mountains .field_study {
     row-gap: 6rem;
     padding-bottom: 5rem;
 }
 
-.mountains .field_study_description_group{
+.mountains .field_study_description_group {
     display: grid;
     gap: 1.5rem;
 }
+
 /* Field study end */
 /* Mountains page end */
 
 /* Ocean page start */
 .ocean main {
     background-color: var(--color-bg-ocean-primary);
+    color: var(--color-text-light);
 }
 
+/* Hero start */
 .ocean .hero {
     background: var(--overlay-dark), url("../images/ocean/ocean_hero.jpg");
     background-size: cover;
@@ -1261,6 +1275,56 @@ main {
     background-repeat: no-repeat;
 }
 
+/* Hero end */
+
+/* Intro start */
+.ocean .section_eyebrow::before {
+    background-color: var(--color-text-light);
+}
+
+/* Intro end */
+
+/* Feature start */
+.ocean figcaption {
+    color: var(--color-text-muted-secondary);
+}
+
+/* Feature end */
+
+/* Connected system start */
+.ocean .element {
+    border-top: 1px solid var(--color-text-light);
+}
+
+/* Connected system end */
+
+/* Field study start */
+.ocean .field_study {
+    background-color: var(--color-bg-ocean-secondary);
+}
+
+/* Field study end */
+
+/* Reading notes start */
+.ocean .note_details {
+    border-top: 1px solid var(--color-text-light);
+}
+
+.ocean .note_details.add {
+    border-bottom: 1px solid var(--color-text-light);
+}
+
+.ocean .note_btn::after,
+.ocean .note_btn::before {
+    background-color: var(--color-text-light);
+}
+
+.ocean .resource_link {
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-text-light)
+}
+
+/* Reading notes end */
 /* Ocean page end */
 
 /* About page start */
