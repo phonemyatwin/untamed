@@ -791,25 +791,29 @@ main {
     background-repeat: no-repeat;
 }
 
-.arctic .intro {
+.arctic .intro,
+.desert .intro {
     padding: 12rem var(--gutter);
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
-.arctic .intro_title {
+.arctic .intro_title,
+.desert .intro_title {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     font-size: 6vw;
 }
 
-.arctic .intro_description {
+.arctic .intro_description,
+.desert .intro_description {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     max-width: 50ch;
 }
 
-.arctic .intro_description:last-child {
+.arctic .intro_description:last-child,
+.desert .intro_description:last-child {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
@@ -836,8 +840,8 @@ main {
 }
 
 .feature_content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
     gap: 2rem;
 }
 
@@ -930,7 +934,7 @@ main {
 .reading_notes {
     padding: 10rem var(--gutter);
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.3fr;
     align-items: start;
     /* gap: 5rem; */
 }
@@ -943,6 +947,7 @@ main {
 
 .reading_notes_title {
     font-size: 5vw;
+    max-width: 10ch;
 }
 
 .notes_container {
@@ -1049,6 +1054,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 /* Hero end */
 
 /* Intro start */
@@ -1080,6 +1086,7 @@ main {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
+
 /* Intro end */
 
 /* Feature start */
@@ -1092,54 +1099,59 @@ main {
     width: 50vw;
 }
 
-.forest .feature_title{
+.forest .feature_title {
     max-width: 10ch;
 }
+
 /* Feature end */
 
 /* Connected system start */
-.forest .connected_system{
+.forest .connected_system {
     border-bottom: 1px solid var(--color-border-light);
 }
 
-.forest .element{
+.forest .element {
     border-top: 1px solid var(--color-text-light);
 }
+
 /* Connected system end */
 
 /* Field study start */
-.forest .field_study{
+.forest .field_study {
     background-color: var(--color-bg-forest-secondary);
-    grid-template-columns:1fr 1.3fr;
+    grid-template-columns: 1fr 1.3fr;
 }
 
-.forest .field_study_title{
+.forest .field_study_title {
     font-size: 6.7vw;
     max-width: 13ch;
 }
 
-.forest .field_study_media{
+.forest .field_study_media {
     aspect-ratio: 4 / 3;
 }
+
 /* Field study end */
 
 /* Reading notes start */
-.forest .note_details{
+.forest .note_details {
     border-top: 1px solid var(--color-border-light);
 }
 
-.forest .note_details.add{
+.forest .note_details.add {
     border-bottom: 1px solid var(--color-border-light);
 }
 
-.forest .note_btn::before, .forest .note_btn::after{
+.forest .note_btn::before,
+.forest .note_btn::after {
     background-color: var(--color-text-light);
 }
 
-.forest .resource_link{
+.forest .resource_link {
     color: var(--color-text-light);
     border-bottom: 1px solid var(--color-text-light);
 }
+
 /* Reading notes end */
 /* Forest page end */
 
@@ -1148,6 +1160,7 @@ main {
     background-color: var(--color-bg-desert);
 }
 
+/* Hero start */
 .desert .hero {
     background: var(--overlay-dark), url("../images/desert/desert_hero.jpg");
     background-size: cover;
@@ -1155,6 +1168,32 @@ main {
     background-repeat: no-repeat;
 }
 
+/* Hero end */
+
+/* Feature start */
+.desert .feature {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.desert .feature_title {
+    max-width: 15ch;
+}
+
+.desert .feature_description {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: end;
+    max-width: 43ch;
+}
+
+.desert .feature_media{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    aspect-ratio: 16 / 9;
+}
+/* Feature end */
 /* Desert page end */
 
 /* Mountains page start */
@@ -1162,13 +1201,20 @@ main {
     background-color: var(--color-bg-light-primary);
 }
 
+/* Hero start */
 .mountains .hero {
     background: var(--overlay-dark), url("../images/mountains/mountains_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+/* Hero end */
 
+/* Intro start */
+.mountains .intro{
+    
+}
+/* Intro end */
 /* Mountains page end */
 
 /* Ocean page start */
@@ -1196,6 +1242,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 /* About page end */
 /* Main end */
 
