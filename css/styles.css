@@ -14,6 +14,7 @@
     --color-bg-desert: #ded5c4;
     --color-bg-ocean-primary: #101f29;
     --color-bg-ocean-secondary: #182e3a;
+    --color-bg-about: #DFE2D8;
     --color-button: #D5DDD0;
 
     /* Text colors */
@@ -794,7 +795,8 @@ main {
 .arctic .intro,
 .desert .intro,
 .mountains .intro,
-.ocean .intro {
+.ocean .intro,
+.about .intro {
     padding: 12rem var(--gutter);
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -803,7 +805,8 @@ main {
 .arctic .intro_title,
 .desert .intro_title,
 .mountains .intro_title,
-.ocean .intro_title {
+.ocean .intro_title,
+.about .intro_title {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     font-size: 6vw;
@@ -812,7 +815,8 @@ main {
 .arctic .intro_description,
 .desert .intro_description,
 .mountains .intro_description,
-.ocean .intro_description {
+.ocean .intro_description,
+.about .intro_description:nth-child(3) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     max-width: 50ch;
@@ -821,7 +825,8 @@ main {
 .arctic .intro_description:last-child,
 .desert .intro_description:last-child,
 .mountains .intro_description:last-child,
-.ocean .intro_description:last-child {
+.ocean .intro_description:last-child,
+.about .intro_description:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
@@ -1332,6 +1337,7 @@ main {
     background-color: var(--color-bg-light-primary);
 }
 
+/* Hero start */
 .about .hero {
     background: var(--overlay-dark), url("../images/about/about_hero.jpg");
     background-size: cover;
@@ -1339,6 +1345,54 @@ main {
     background-repeat: no-repeat;
 }
 
+/* Hero end */
+
+/* Intro start */
+.about .intro {
+    gap: 2rem;
+}
+
+.about .intro_description {
+    max-width: 50ch;
+}
+
+.about .intro_description:last-child {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+/* Intro end */
+
+/* Connected system start */
+.about .connected_system {
+    background-color: var(--color-bg-about);
+}
+
+.about .element_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.about .element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.about .element_title {
+    font-size: 4vw;
+    text-transform: capitalize;
+}
+
+.about .element_description {
+    max-width: 42ch;
+}
+/* Connected system end */
+
+/* Section about end */
 /* About page end */
 /* Main end */
 
