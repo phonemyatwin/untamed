@@ -128,7 +128,7 @@ h3,
     content: "";
     width: 0.4rem;
     height: 0.4rem;
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-text-dark);
 }
 
 .header_nav_eyebrow,
@@ -652,8 +652,8 @@ main {
     color: var(--color-text-white);
 }
 
-.perspective .section_eyebrow:before {
-    background-color: var(--color-bg-light-primary);
+.perspective .section_eyebrow::before {
+    background-color: var(--color-text-light);
 }
 
 .perspective_title {
@@ -957,8 +957,8 @@ main {
     grid-template-columns: auto;
 }
 
-.note_details.add{
-    border-bottom:1px solid var(--color-border-dark) ;
+.note_details.add {
+    border-bottom: 1px solid var(--color-border-dark);
 }
 
 .note_summary {
@@ -975,6 +975,8 @@ main {
 
 .note_btn::before,
 .note_btn::after {
+    width: 0.75rem;
+    height: 2px;
     background-color: var(--color-text-black);
 }
 
@@ -983,7 +985,7 @@ main {
     margin-top: 1.5rem;
 }
 
-.resource{
+.resource {
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
@@ -991,16 +993,17 @@ main {
     font-size: var(--fs-sm);
 }
 
-.resource .resource_link{
+.resource .resource_link {
     color: var(--color-text-dark);
     font-size: var(--fs-sm);
     border-bottom: 1px solid var(--color-text-dark);
     gap: 0.5rem;
 }
 
-.resource_link .north_east_arrow{
+.resource_link .north_east_arrow {
     font-size: var(--fs-sm);
 }
+
 /* Reading notes end */
 
 
@@ -1016,7 +1019,7 @@ main {
 
 .next_page_link {
     color: var(--color-text-white);
-    font-size: 8vw;
+    font-size: 6.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1036,15 +1039,108 @@ main {
 /* Forest page start */
 .forest main {
     background-color: var(--color-bg-forest-primary);
+    color: var(--color-text-light);
 }
 
+/* Hero start */
 .forest .hero {
     background: var(--overlay-dark), url("../images/forest/forest_hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+/* Hero end */
 
+/* Intro start */
+.forest .intro {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.forest .section_eyebrow::before {
+    background-color: var(--color-text-light)
+}
+
+.forest .intro_title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 6.5vw;
+    max-width: 10ch;
+    padding-bottom: 1.5rem;
+}
+
+.forest .intro_description {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    max-width: 50ch;
+}
+
+.forest .intro_description:last-child {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+/* Intro end */
+
+/* Feature start */
+.forest .feature {
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.forest .feature_media {
+    height: 95vh;
+    width: 50vw;
+}
+
+.forest .feature_title{
+    max-width: 10ch;
+}
+/* Feature end */
+
+/* Connected system start */
+.forest .connected_system{
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.forest .element{
+    border-top: 1px solid var(--color-text-light);
+}
+/* Connected system end */
+
+/* Field study start */
+.forest .field_study{
+    background-color: var(--color-bg-forest-secondary);
+    grid-template-columns:1fr 1.3fr;
+}
+
+.forest .field_study_title{
+    font-size: 6.7vw;
+    max-width: 13ch;
+}
+
+.forest .field_study_media{
+    aspect-ratio: 4 / 3;
+}
+/* Field study end */
+
+/* Reading notes start */
+.forest .note_details{
+    border-top: 1px solid var(--color-border-light);
+}
+
+.forest .note_details.add{
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.forest .note_btn::before, .forest .note_btn::after{
+    background-color: var(--color-text-light);
+}
+
+.forest .resource_link{
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-text-light);
+}
+/* Reading notes end */
 /* Forest page end */
 
 /* Desert page start */
@@ -1100,7 +1196,6 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 /* About page end */
 /* Main end */
 
