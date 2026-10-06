@@ -49,6 +49,8 @@
     --ls-widest: 0.1em;
 
     /* Font size & line height*/
+    --fs-3xs: 0.5rem;
+    --fs-2xs: 0.65rem;
     --fs-xs: 0.75rem;
     --fs-sm: 0.875rem;
     --fs-base: 1rem;
@@ -1238,10 +1240,6 @@ main {
 /* Hero end */
 
 /* Intro start */
-.mountains .intro {
-    /* align-items: start; */
-}
-
 .mountains .intro_title {
     max-width: 8.6ch;
 }
@@ -1617,3 +1615,20 @@ footer .section_link {
 }
 
 /* Footer end */
+
+
+/* Media Query Start */
+
+@media(max-width:992px){
+
+}
+
+@media(max-width:768px){
+
+}
+
+@media(max-width:576px){
+
+}
+
+/* Media Query End */
