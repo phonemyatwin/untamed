@@ -883,13 +883,15 @@ main {
     border-bottom: 1px solid var(--color-border-dark);
 }
 
-.element_container, .reading_container {
+.element_container,
+.reading_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
 }
 
-.element, .reading {
+.element,
+.reading {
     grid-column: 1 / 2;
     padding-top: 1rem;
     border-top: 1px solid var(--color-text-dark);
@@ -898,15 +900,18 @@ main {
     gap: 1rem;
 }
 
-.element:nth-child(2) ,.reading:nth-child(2){
+.element:nth-child(2),
+.reading:nth-child(2) {
     grid-column: 2 / 3;
 }
 
-.element:last-child, .reading:last-child {
+.element:last-child,
+.reading:last-child {
     grid-column: 3 / 4;
 }
 
-.element_title, .reading_title {
+.element_title,
+.reading_title {
     font-size: 2vw;
 }
 
@@ -1619,8 +1624,276 @@ footer .section_link {
 
 /* Media Query Start */
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
+    /* Reusable components */
+    .section_link {
+        gap: 1.5rem;
+    }
+
+    .north_east_arrow {
+        font-size: var(--fs-xl);
+    }
+
+
+    /* Header start */
+    .header_brand {
+        font-size: var(--fs-2xl);
+    }
+
+    .header_nav {
+        gap: 3rem;
+    }
+
+    .header_nav_title {
+        font-size: var(--fs-7xl);
+    }
+
+    .header_nav_link,
+    .footer_nav_link {
+        font-size: var(--fs-2xl);
+    }
+
+    .header_nav_link {
+        gap: 1.5rem;
+    }
+
+    /* Header end */
+
+
+    /* Hero start */
+    .hero_title {
+        font-size: 10vw;
+    }
+
+    /* Hero end */
+
+
+    /* Intro start */
+    .intro {
+        padding: 7rem var(--gutter);
+        gap: 2rem;
+    }
+
+    /* Intro end */
+
+
+    /* Explore start */
+    .explore_content {
+        padding: 4rem var(--gutter);
+    }
+
+    .explore_title {
+        font-size: var(--fs-6xl);
+    }
+
+    .environment_title {
+        font-size: var(--fs-8xl);
+    }
+
+    /* Explore end */
+
+
+    /* Wild statistics start */
+    .wild_stats {
+        padding: 5rem var(--gutter);
+        gap: 4rem;
+    }
+
+    .wild_stats_title {
+        font-size: var(--fs-7xl);
+    }
+
+    .stats_container {
+        gap: 4rem 0;
+    }
+
+    .stat_number {
+        font-size: 11vw;
+    }
+
+    /* Wild statistics end */
+
+
+    /* Perspective start */
+    .perspective_title {
+        font-size: var(--fs-7xl);
+    }
+
+    /* Perspective end */
+
+
+    /* Journal start */
+    .journal {
+        padding: 7rem var(--gutter);
+        gap: 4rem;
+    }
+
+    .journal_title {
+        font-size: var(--fs-7xl);
+    }
+
+    .journal_template {
+        column-gap: 4rem;
+    }
+
+    .journal_template:last-child {
+        gap: 4rem;
+    }
+
+    .journal_template_title {
+        font-size: var(--fs-4xl);
+    }
+
+    /* Journal end */
+
+
+    /* Section about start */
+    .section_about {
+        padding: 7rem var(--gutter);
+        gap: 3rem;
+    }
+
+    .section_about_title {
+        font-size: var(--fs-7xl);
+    }
+
+    /* Section about end */
+
+
+    /* Intro start */
+    .arctic .intro,
+    .desert .intro,
+    .mountains .intro,
+    .ocean .intro,
+    .about .intro {
+        padding: 9rem var(--gutter);
+    }
+
+    .arctic .intro_title,
+    .desert .intro_title,
+    .mountains .intro_title,
+    .ocean .intro_title,
+    .about .intro_title,
+    .forest .intro_title {
+        font-size: var(--fs-7xl);
+    }
+
+    /* Intro end */
+
+
+    /* Feature start */
+    .feature {
+        gap: 4rem;
+    }
+
+    .feature_title {
+        font-size: var(--fs-5xl);
+    }
+
+    .forest .feature_media {
+        height: 75vh;
+    }
+
+    /* Feature end */
+
+
+    /* Connected system start */
+    .connected_system {
+        padding: 8rem var(--gutter) 7rem;
+    }
+
+    .element_container,
+    .reading_container {
+        gap: 2rem;
+    }
+
+    .element_title,
+    .reading_title {
+        font-size: var(--fs-2xl);
+    }
+
+    /* Connected system end */
+
+
+    /* Field study start */
+    .field_study {
+        padding: 8rem var(--gutter);
+        column-gap: 3rem;
+    }
+
+    .field_study_title,
+    .forest .field_study_title {
+        font-size: var(--fs-7xl);
+    }
+
+    /* Field study end */
+
+
+    /* Reading notes start */
+    .reading_notes {
+        padding: 8rem var(--gutter);
+        gap: 3rem;
+    }
+
+    .reading_notes_title {
+        font-size: var(--fs-5xl);
+    }
+
+    .note_summary {
+        font-size: var(--fs-xl);
+    }
+
+    /* Reading notes end */
+
+
+    /* Next page start */
+    .next_page_link {
+        font-size: var(--fs-7xl);
+    }
+
+    /* Next page end */
+
+
+    /* About page start */
+    .about .element_title {
+        font-size: var(--fs-4xl);
+    }
+
+    .observe_title {
+        font-size: var(--fs-7xl);
+    }
+
+    .observe_template {
+        gap: 4rem;
+    }
+
+    .observe_template_title {
+        font-size: var(--fs-4xl);
+    }
+
+    /* About page end */
+
+
+    /* Footer start */
+    footer {
+        padding-top: 6rem;
+        gap: 4rem;
+    }
+
+    .footer_top {
+        gap: 3rem;
+    }
+
+    .footer_brand {
+        font-size: var(--fs-7xl);
+    }
+
+    .footer_title {
+        font-size: var(--fs-5xl);
+    }
+
+    /* Footer end */
 }
 
 @media(max-width:768px){
@@ -1630,5 +1903,4 @@ footer .section_link {
 @media(max-width:576px){
 
 }
-
 /* Media Query End */
