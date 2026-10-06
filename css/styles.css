@@ -314,12 +314,9 @@ header:has(.header_nav_details[open]) {
 }
 
 .header_nav_title {
-    text-transform: uppercase;
     color: var(--color-text-white);
     font-size: 5vw;
     font-weight: var(--fw-medium);
-    letter-spacing: var(--ls-tighter);
-    line-height: var(--lh-tight);
     max-width: 10ch;
 }
 
