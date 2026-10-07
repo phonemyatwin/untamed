@@ -1896,11 +1896,410 @@ footer .section_link {
     /* Footer end */
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
+    /* Header start */
+    header {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .header_group {
+        gap: 1.5rem;
+    }
+
+    .header_nav {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        padding-block: 2rem;
+    }
+
+    .header_nav_content {
+        gap: 1.5rem;
+    }
+
+    .header_nav_title {
+        font-size: var(--fs-6xl);
+        max-width: 8ch;
+    }
+
+    .header_nav_link {
+        font-size: var(--fs-xl);
+    }
+
+    /* Header end */
+
+
+    /* Hero start */
+    .hero_title {
+        font-size: 11vw;
+    }
+
+    /* Hero end */
+
+
+    /* Intro start */
+    .intro {
+        grid-template-columns: 1fr;
+        padding: 6rem var(--gutter);
+        gap: 2rem;
+    }
+
+    .intro_title {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: var(--fs-7xl);
+    }
+
+    .intro_description {
+        grid-column: 1;
+        grid-row: auto;
+        align-self: auto;
+        max-width: 45ch;
+    }
+
+    /* Intro end */
+
+
+    /* Explore start */
+    .explore_content {
+        padding: 4rem var(--gutter);
+    }
+
+    .explore_title {
+        font-size: var(--fs-5xl);
+    }
+
+    .swiper-slide.environment {
+        min-height: 70vh;
+    }
+
+    .environment_title {
+        font-size: var(--fs-7xl);
+    }
+
+    /* Explore end */
+
+
+    /* Wild statistics start */
+    .wild_stats_title {
+        font-size: var(--fs-6xl);
+    }
+
+    .stat_number {
+        font-size: 13vw;
+    }
+
+    /* Wild statistics end */
+
+
+    /* Perspective start */
+    .perspective {
+        height: 70vh;
+    }
+
+    .perspective_title {
+        font-size: var(--fs-6xl);
+    }
+
+    /* Perspective end */
+
+
+    /* Journal start */
+    .journal {
+        padding: 6rem var(--gutter);
+    }
+
+    .journal_content {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .journal_title {
+        font-size: var(--fs-6xl);
+    }
+
+    .journal_template,
+    .journal_template:last-child {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .journal_template_content,
+    .journal_template:last-child .journal_template_content {
+        justify-self: start;
+        grid-row: auto;
+        grid-column: auto;
+    }
+
+    .journal_template_media,
+    .journal_template:last-child .journal_template_media {
+        grid-row: auto;
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .journal_template_title {
+        font-size: var(--fs-4xl);
+        max-width: 12ch;
+    }
+
+    /* Journal end */
+
+
+    /* Section about start */
+    .section_about {
+        grid-template-columns: 1fr;
+        padding: 6rem var(--gutter);
+        gap: 2rem;
+    }
+
+    .section_about_title {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: var(--fs-6xl);
+        max-width: 12ch;
+    }
+
+    .section_about_content {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+        align-self: auto;
+    }
+
+    /* Section about end */
+
+
+    /* Intro start */
+    .arctic .intro,
+    .desert .intro,
+    .mountains .intro,
+    .ocean .intro,
+    .about .intro,
+    .forest .intro {
+        grid-template-columns: 1fr;
+        padding: 7rem var(--gutter);
+        gap: 2rem;
+    }
+
+    .arctic .intro_title,
+    .desert .intro_title,
+    .mountains .intro_title,
+    .ocean .intro_title,
+    .about .intro_title,
+    .forest .intro_title {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: var(--fs-6xl);
+        max-width: 12ch;
+        padding-bottom: 0;
+    }
+
+    .arctic .intro_description,
+    .desert .intro_description,
+    .mountains .intro_description,
+    .ocean .intro_description,
+    .forest .intro_description,
+    .about .intro_description,
+    .about .intro_description:nth-child(3),
+    .about .intro_description:nth-child(4),
+    .about .intro_description:last-child {
+        grid-column: 1;
+        grid-row: auto;
+        max-width: 50ch;
+    }
+
+    /* Intro end */
+
+
+    /* Feature start */
+    .feature,
+    .forest .feature,
+    .mountains .feature,
+    .desert .feature,
+    .ocean .feature {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .feature_content,
+    .feature_media,
+    .feature_description,
+    .desert .feature_description,
+    .ocean .feature_description,
+    .desert .feature_media,
+    .ocean .feature_media {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: auto;
+        align-self: auto;
+    }
+
+    .feature_title {
+        font-size: var(--fs-5xl);
+        max-width: 12ch;
+    }
+
+    .forest .feature_media {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Feature end */
+
+
+    /* Connected system start */
+    .connected_system {
+        padding: 7rem var(--gutter);
+        gap: 3rem;
+    }
+
+    .element_container,
+    .reading_container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .element,
+    .reading,
+    .element:nth-child(2),
+    .reading:nth-child(2),
+    .element:last-child,
+    .reading:last-child {
+        grid-column: 1;
+    }
+
+    .element_title,
+    .reading_title {
+        font-size: var(--fs-3xl);
+    }
+
+    /* Connected system end */
+
+
+    /* Field study start */
+    .field_study,
+    .forest .field_study,
+    .mountains .field_study {
+        grid-template-columns: 1fr;
+        padding: 7rem var(--gutter);
+        gap: 3rem;
+    }
+
+    .field_study_content {
+        justify-self: start;
+    }
+
+    .field_study_title,
+    .forest .field_study_title,
+    .mountains .field_study_title {
+        font-size: var(--fs-6xl);
+        max-width: 12ch;
+    }
+
+    .field_study_media,
+    .mountains .field_study_media {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+    }
+
+    .mountains .field_study_description_group {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+        align-self: auto;
+    }
+
+    /* Field study end */
+
+
+    /* Reading notes start */
+    .reading_notes {
+        grid-template-columns: 1fr;
+        padding: 7rem var(--gutter);
+        gap: 4rem;
+    }
+
+    .reading_notes_title {
+        font-size: var(--fs-5xl);
+        max-width: 12ch;
+    }
+
+    .note_summary {
+        font-size: var(--fs-xl);
+    }
+
+    /* Reading notes end */
+
+
+    /* Next page start */
+    .next_page {
+        padding: 4rem var(--gutter);
+    }
+
+    .next_page_link {
+        font-size: var(--fs-6xl);
+    }
+
+    /* Next page end */
+
+
+    /* About page start */
+    .about .element {
+        gap: 3rem;
+    }
+
+    .about .element_title {
+        font-size: var(--fs-4xl);
+    }
+
+    .observe_content {
+        height: 75vh;
+    }
+
+    .observe_title {
+        font-size: var(--fs-6xl);
+    }
+
+    .observe_template {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .observe_template_title {
+        font-size: var(--fs-4xl);
+        max-width: 12ch;
+    }
+
+    /* About page end */
+
+
+    /* Footer start */
+    footer {
+        padding-top: 6rem;
+    }
+
+    .footer_top {
+        gap: 3rem;
+    }
+
+    .footer_brand {
+        font-size: var(--fs-6xl);
+    }
+
+    .footer_title {
+        font-size: var(--fs-4xl);
+    }
+
+    .footer_nav_link {
+        font-size: var(--fs-xl);
+    }
+
+    /* Footer end */
 }
 
-@media(max-width:576px){
+@media(max-width:576px) {}
 
-}
 /* Media Query End */
