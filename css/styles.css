@@ -2300,6 +2300,478 @@ footer .section_link {
     /* Footer end */
 }
 
-@media(max-width:576px) {}
+@media(max-width:576px) {
+
+    /* Reusable components */
+    .section_eyebrow,
+    .hero_eyebrow,
+    .environment_eyebrow,
+    .journal_template_eyebrow,
+    .element_eyebrow,
+    .next_page,
+    .observe_reading_eyebrow,
+    .reading_eyebrow,
+    .observe_template_eyebrow {
+        font-size: var(--fs-2xs);
+    }
+
+    .section_link {
+        font-size: var(--fs-xs);
+        gap: 1rem;
+    }
+
+    .north_east_arrow {
+        font-size: var(--fs-lg);
+    }
+
+
+    /* Header start */
+    header {
+        gap: 1rem;
+        padding-block: 1rem;
+    }
+
+    .header_brand {
+        font-size: var(--fs-xl);
+    }
+
+    .header_group {
+        gap: 1rem;
+        font-size: var(--fs-xs);
+    }
+
+    .header_nav_summary {
+        gap: 1rem;
+    }
+
+    .header_nav {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem var(--gutter);
+    }
+
+    .header_nav_content {
+        gap: 1.5rem;
+    }
+
+    .header_nav_title {
+        font-size: var(--fs-5xl);
+        max-width: 8ch;
+    }
+
+    .header_nav_item {
+        padding: 0.5rem 0;
+    }
+
+    .header_nav_link {
+        font-size: var(--fs-lg);
+        grid-template-columns: auto auto 1fr;
+        gap: 1rem;
+    }
+
+    .header_nav_number {
+        font-size: var(--fs-xs);
+    }
+
+    /* Header end */
+
+
+    /* Hero start */
+    .hero {
+        padding-bottom: 1.5rem;
+    }
+
+    .hero_title {
+        font-size: clamp(var(--fs-5xl), 12vw, var(--fs-7xl));
+    }
+
+    .hero_content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .hero_description {
+        max-width: 32ch;
+    }
+
+    .hero_link {
+        gap: 1rem;
+    }
+
+    /* Hero end */
+
+
+    /* Intro start */
+    .intro {
+        padding: 5rem var(--gutter);
+    }
+
+    .intro_title {
+        font-size: clamp(var(--fs-4xl), 12vw, var(--fs-6xl));
+    }
+
+    /* Intro end */
+
+
+    /* Explore start */
+    .explore_content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem var(--gutter);
+    }
+
+    .explore_title {
+        font-size: var(--fs-5xl);
+        max-width: 10ch;
+    }
+
+    .swiper-slide.environment {
+        min-height: 65vh;
+        padding: 2rem var(--gutter);
+    }
+
+    .environment_title {
+        font-size: clamp(var(--fs-6xl), 16vw, var(--fs-8xl));
+    }
+
+    /* Explore end */
+
+
+    /* Wild statistics start */
+    .wild_stats {
+        padding: 5rem var(--gutter);
+        gap: 3rem;
+    }
+
+    .wild_stats_title {
+        font-size: var(--fs-5xl);
+        max-width: 10ch;
+    }
+
+    .stats_container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .first,
+    .second,
+    .third {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .stat_number {
+        font-size: clamp(var(--fs-8xl), 25vw, var(--fs-9xl));
+    }
+
+    /* Wild statistics end */
+
+
+    /* Perspective start */
+    .perspective {
+        height: 75vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .perspective .section_eyebrow {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .perspective_title {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: end;
+        align-self: start;
+        font-size: var(--fs-5xl);
+    }
+
+    .perspective_description {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: end;
+    }
+
+    /* Perspective end */
+
+
+    /* Journal start */
+    .journal {
+        padding: 5rem var(--gutter);
+        gap: 4rem;
+    }
+
+    .journal_content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .journal_title {
+        font-size: var(--fs-5xl);
+    }
+
+    .journal_template,
+    .journal_template:last-child {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .journal_template_title {
+        font-size: var(--fs-3xl);
+        max-width: 11ch;
+    }
+
+    .journal_template_content {
+        gap: 1.5rem;
+    }
+
+    /* Journal end */
+
+
+    /* Section about start */
+    .section_about {
+        padding: 5rem var(--gutter);
+    }
+
+    .section_about_title {
+        font-size: var(--fs-5xl);
+    }
+
+    /* Section about end */
+
+
+    /* Intro start */
+    .arctic .intro,
+    .desert .intro,
+    .mountains .intro,
+    .ocean .intro,
+    .about .intro,
+    .forest .intro {
+        padding: 6rem var(--gutter);
+    }
+
+    .arctic .intro_title,
+    .desert .intro_title,
+    .mountains .intro_title,
+    .ocean .intro_title,
+    .about .intro_title,
+    .forest .intro_title {
+        font-size: clamp(var(--fs-4xl), 12vw, var(--fs-6xl));
+        max-width: 12ch;
+    }
+
+    /* Intro end */
+
+
+    /* Feature start */
+    .feature,
+    .forest .feature,
+    .mountains .feature,
+    .desert .feature,
+    .ocean .feature {
+        padding: 0 var(--gutter) 4rem;
+        gap: 2rem;
+    }
+
+    .feature_title {
+        font-size: var(--fs-4xl);
+    }
+
+    .feature_media,
+    .forest .feature_media,
+    .desert .feature_media,
+    .ocean .feature_media {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Feature end */
+
+
+    /* Connected system start */
+    .connected_system {
+        padding: 6rem var(--gutter);
+    }
+
+    .element_container,
+    .reading_container {
+        gap: 2rem;
+    }
+
+    .element_title,
+    .reading_title {
+        font-size: var(--fs-3xl);
+    }
+
+    .about .element {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .about .element_title {
+        font-size: var(--fs-3xl);
+    }
+
+    /* Connected system end */
+
+
+    /* Field study start */
+    .field_study,
+    .forest .field_study,
+    .mountains .field_study {
+        padding: 6rem var(--gutter);
+        gap: 2.5rem;
+    }
+
+    .field_study_title,
+    .forest .field_study_title,
+    .mountains .field_study_title {
+        font-size: var(--fs-5xl);
+    }
+
+    .field_study_media,
+    .forest .field_study_media,
+    .mountains .field_study_media {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Field study end */
+
+
+    /* Reading notes start */
+    .reading_notes {
+        padding: 6rem var(--gutter);
+        gap: 3rem;
+    }
+
+    .reading_notes_title {
+        font-size: var(--fs-4xl);
+    }
+
+    .note_summary {
+        font-size: var(--fs-lg);
+    }
+
+    .note_description {
+        max-width: none;
+    }
+
+    /* Reading notes end */
+
+
+    /* Next page start */
+    .next_page {
+        padding: 4rem var(--gutter);
+    }
+
+    .next_page_link {
+        font-size: clamp(var(--fs-4xl), 11vw, var(--fs-6xl));
+        gap: 1rem;
+    }
+
+    .next_page_link .north_east_arrow {
+        width: auto;
+        font-size: var(--fs-3xl);
+    }
+
+    /* Next page end */
+
+
+    /* About page start */
+    .observe {
+        padding-bottom: 5rem;
+    }
+
+    .observe_content {
+        height: 75vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .observe .section_eyebrow {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .observe_title {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: var(--fs-5xl);
+        align-self: end;
+    }
+
+    .observe_description {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: start;
+        align-self: end;
+        max-width: 30ch;
+        margin-top: 2rem;
+    }
+
+    .observe_template {
+        padding: var(--gutter);
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .observe_template_title {
+        font-size: var(--fs-3xl);
+        max-width: 10ch;
+    }
+
+    /* About page end */
+
+
+    /* Footer start */
+    footer {
+        padding: 5rem var(--gutter) 1.5rem;
+        gap: 4rem;
+    }
+
+    .footer_top {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .footer_content {
+        max-width: none;
+    }
+
+    .footer_brand {
+        font-size: clamp(var(--fs-6xl), 17vw, var(--fs-9xl));
+        letter-spacing: var(--ls-tighter);
+    }
+
+    .footer_title {
+        font-size: var(--fs-4xl);
+    }
+
+    .footer_nav_link {
+        font-size: var(--fs-xl);
+    }
+
+    .footer_nav_item {
+        padding: 1rem 0;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .footer_bottom_link {
+        gap: 1rem;
+    }
+
+    /* Footer end */
+}
 
 /* Media Query End */
